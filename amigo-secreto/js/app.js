@@ -2,6 +2,11 @@ let listaAmigos = [];
 
 function adicionar() {
     let amigo = document.getElementById('nome-amigo');
+    if (amigo.value == ''){
+        alert('Informe um nome antes de adicionar');
+        return;
+    }
+
     let amigos = document.getElementById('lista-amigos');
 
     listaAmigos.push(amigo.value);
