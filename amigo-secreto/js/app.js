@@ -4,13 +4,13 @@ function adicionar() {
     let amigo = document.getElementById('nome-amigo');
     let amigos = document.getElementById('lista-amigos');
 
-    listaAmigos.push(amigo.value);
-
-    if (amigos.textContent == '') {
-        amigos.textContent = amigo.value;
-    } else {
-        amigos.textContent += ', ' + amigo.value;
+    if (amigo.value == ''){
+        alert('Informe um nome antes de adicionar');
+        return;
     }
+
+    listaAmigos.push(amigo.value);
+    amigos.textContent += amigos.textContent == '' ? amigo.value : ', ' + amigo.value;
 
     amigo.value = '';
 }
