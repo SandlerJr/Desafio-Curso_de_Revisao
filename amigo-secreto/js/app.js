@@ -16,6 +16,10 @@ function adicionar() {
 }
 
 function sortear(){
+    if (listaAmigos.length < 3){
+        alert('Adicione pelo menos 4 amigos!');
+        return;
+    }
     embaralhar(listaAmigos);
 
     let sorteio = document.getElementById('lista-sorteio');
